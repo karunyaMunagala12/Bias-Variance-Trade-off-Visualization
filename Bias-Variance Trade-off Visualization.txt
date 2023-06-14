@@ -1,0 +1,41 @@
+Bias-Variance Trade-off Visualization:This project aims to replicate figures 4.5 and 4.6 in section 4.7 of Alpaydin's "Introduction to Machine Learning" book. The goal is to deepen the understanding of bias and variance in machine learning models.
+Figure Replication
+
+
+Figure 4.5: Polynomial Fits
+The first part of the project replicates Figure 4.5, which demonstrates polynomial fits of different degrees on randomly generated datasets. The ground truth function for regression is defined as f(x) = 3 cos(2x). The project generates 100 sample datasets, each containing 20 points randomly selected from the range [0, 5] with corresponding target points. Gaussian white noise (N(0,1)) is added to the target points to create noisy datasets.
+
+The figure includes the following plots:
+1.	Function and Data: Shows the ground truth function and one noisy dataset sampled from the function.
+2.	Order 1: Generates five polynomial fits of degree one based on the first five datasets. Includes an average line for the five fits.
+3.	Order 3: Generates five polynomial fits of degree three based on the first five datasets. Includes an average line for the five fits.
+4.	Order 5: Generates five polynomial fits of degree five based on the first five datasets. Includes an average line for the five fits.
+Sklearn's PolynomialFeatures and LinearRegression are utilized for polynomial regression.
+
+Figure 4.6: Bias-Variance Trade-off
+The second part of the project replicates Figure 4.6, illustrating the bias-variance trade-off. It computes and visualizes the total error, bias error, and variance error for different polynomial models.
+The process involves fitting 100 models for each degree (ranging from 1 to 5) to the 100 generated datasets. Then, the models are evaluated on 10 equally spaced evaluation points between 0 and 5. The average predictions at each evaluation point are computed for each degree.
+
+The figure includes the following curves:
+•	Bias^2: Bias error squared for each polynomial order.
+•	Variance: Variance error for each polynomial order.
+•	Error: Total error (sum of bias error and variance error) for each polynomial order.
+The project utilizes the total error equation (4.36) from the book to calculate bias error and variance error. It also provides a DataFrame that summarizes the bias error, variance error, and total error for each polynomial order.
+
+Getting Started
+To run the project, follow these steps:
+1.	Install the necessary dependencies: numpy, pandas, and matplotlib.
+2.	Copy the provided Python code into your Python environment or IDE.
+3.	Execute the code to replicate the figures and generate the visualization.
+4.	Customize the code or experiment with different parameters as desired.
+
+Dependencies
+The project relies on the following dependencies:
+•	numpy - Required for array operations and mathematical calculations.
+•	pandas - Used for creating the DataFrame to display the error results.
+•	matplotlib - Used for generating the visualizations and plots.
+
+License
+This project is licensed under the MIT License.
+Acknowledgments
+The project is based on the concepts presented in the book "Introduction to Machine Learning" by Ethem Alpaydin. The replication of figures 4.5 and 4.6 aims to deepen the understanding of bias and variance in machine learning models
